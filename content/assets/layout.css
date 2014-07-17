@@ -1,0 +1,36 @@
+/* Thank you to http://getbootstrap.com/examples/sticky-footer/
+ * for CSS/markup for Sticky Footer
+ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 36px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+}
+.footer .container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+h1 {
+  font-size: 48px;
+}
+/* Make alignments disapear when media gets skinny */
+
+@media (min-width: 992px) {
+  .text-center-md {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .pull-right-md {
+    float: right !important;
+  }
+}

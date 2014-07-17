@@ -1,0 +1,21 @@
+{
+  "name": "resume",
+  "version": "0.0.1",
+  "author": "John Manero <john.manero@gmail.com>",
+  "description": "My resume",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jmanero/resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmanero/resume/issues"
+  },
+  "dependencies": {
+    "express": "4.6.x"
+  },
+  "homepage": "https://github.com/jmanero/resume",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
