@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+wkhtmltopdf --zoom 0.65 -B 4 http://john.manero.io john_manero.pdf
