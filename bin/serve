@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+'use strict';
+const Express = require('express');
+const HTTP = require('http');
+
+const Page = require('../lib/page');
+const Static = require('../lib/static');
+const Style = require('../lib/style');
+
+global.Log = require('winston');
+Log.level = 'debug';
+
+Style.use('bootstrap', 'bootstrap/scss');
+Style.use('font-awesome', 'font-awesome/scss');
+
+const app = Express();
+const server = HTTP.createServer(app);
+
+// Catch favicon requests
+app.get('/favicon.ico', (req, res) => res.status(404).end());
+
+// Render SCSS, serve font-awesome fonts
+app.use('/styles', Style.serve());
+app.use('/fonts', Static.serve({module: 'font-awesome/fonts'}));
+
+// Serve JavaScript assets
+app.use('/jquery', Static.serve({module: 'jquery/dist'}));
+app.use('/tether', Static.serve({module: 'tether/dist/js'}));
+app.use('/bootstrap', Static.serve({module: 'bootstrap/dist/js'}));
+
+// Render pages
+app.use(Page.serve());
+
+server.listen(3000, 'localhost', () => {
+  console.log('Listening for requests on HTTP/localhost:3000');
+});
