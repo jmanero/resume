@@ -1,0 +1,13 @@
+{
+  "globals": {
+    "Config": true,
+    "Log": true
+  },
+  "extends": [
+    "rapid7/base",
+    "rapid7/rules/node"
+  ],
+  "rules": {
+    "arrow-body-style": 0
+  }
+}
