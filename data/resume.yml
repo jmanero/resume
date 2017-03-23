@@ -93,7 +93,7 @@ history:
       Worked on several teams supporting the DynECT Enterprise DNS platform.
     sections:
       - name: Automation Team
-        date: June 3013 - August 2014
+        date: June 2013 - August 2014
         description: >-
           Designed and implemented a DNS authoritative platform to run on leased infrastructure
           in China. System was managed entirely by Chef, including secure TSIG key generation and
@@ -117,7 +117,7 @@ history:
   - name: Worcester Polytechnic Institute
     location: Worcester, MA
     sections:
-      - name: Batchelor of Science
+      - name: Bachelor of Science
         title: Electrical and Computer Engineering, Minor in Computer Science
         date: Fall 2008 - Spring 2012
         description: >-
