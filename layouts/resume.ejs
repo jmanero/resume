@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('includes/head') %>
+<body>
+<%- include('includes/masthead') %>
+<%- include('includes/skills') %>
+<%- include('includes/projects') %>
+
+<div class="history">
+  <% resume.history.forEach((item) => { -%>
+  <%- include('includes/history', {item, level: 1}) %>
+  <% }) -%>
+</div>
+
+</body>
+</html>

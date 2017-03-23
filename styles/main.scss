@@ -1,0 +1,67 @@
+// Bootstrap Configuration
+$font-size-base: 0.8rem;
+
+// Load Bootstrap and Font-Awesome
+@import "bootstrap/bootstrap-reboot";
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/_card";
+@import "bootstrap/_badge";
+@import "bootstrap/utilities/_align";
+@import "bootstrap/utilities/_text";
+@import "font-awesome/font-awesome";
+
+.bold {
+  font-weight: 600;
+}
+
+.icon {
+  width: 1rem;
+}
+
+.title-1 {
+  font-size: 1.5rem;
+}
+
+.title-2 {
+  font-size: 1rem;
+}
+
+.section {
+  @extend .row;
+  padding-bottom: 1rem;
+}
+
+.masthead {
+  @extend .container;
+
+  .name {
+    @extend .row;
+  }
+}
+
+.skills {
+  @extend .container;
+}
+
+.projects {
+  @extend .container;
+
+}
+
+.history {
+  @extend .container;
+
+  .group {
+    page-break-inside: avoid;
+  }
+
+  span.info {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  div.info {
+    margin-right: 0.5rem;
+    margin-bottom: 0.375rem;
+  }
+}

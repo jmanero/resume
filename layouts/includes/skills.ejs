@@ -1,0 +1,19 @@
+<div class="skills">
+  <div class="section">
+    <div class="col-sm-7">
+      <%= resume.introduction %>
+    </div>
+    <div class="col-sm-2">
+      <div class="title-2">Languages</div>
+      <% resume.languages.forEach((name) => { -%>
+      <span class="badge badge-default"><%= name %></span>
+      <% }) -%>
+    </div>
+    <div class="col-sm-3">
+      <div class="title-2">Tools, Services, and Platforms</div>
+      <% resume.tools.forEach((name) => { -%>
+      <span class="badge badge-default"><%= name %></span>
+      <% }) -%>
+    </div>
+  </div>
+</div>

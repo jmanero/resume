@@ -1,0 +1,18 @@
+<div class="group">
+  <div class="row">
+    <div class="col-12">
+      <span class="title-<%= level %>"><%= item.name %></span>
+<% if (item.hasOwnProperty('title')) {%><span class="info bold"><%= item.title %></span><%} -%>
+<% if (item.hasOwnProperty('location')) {%><span class="info"><i class="fa fa-map-marker"></i>&nbsp;<%= item.location %></span><%} -%>
+<% if (item.hasOwnProperty('date')) {%><div class="info"><i class="fa fa-calendar"></i>&nbsp;<%= item.date %></div><%} -%>
+    </div>
+  </div>
+  <div class="section">
+    <div class="col-12"><%- item.description %></div>
+  </div>
+</div>
+<% if (item.hasOwnProperty('sections')) { -%>
+<%   item.sections.forEach((section) => { -%>
+<%-    include('history', {item: section, level: level + 1}) %>
+<%   }) -%>
+<% } -%>

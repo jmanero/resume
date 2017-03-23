@@ -1,0 +1,16 @@
+<div class="projects">
+  <div class="row">
+    <div class="col-12">
+      <span class="title-1">Projects</span>
+    </div>
+  </div>
+  <div class="section">
+<% resume.projects.slice(0, 3).forEach((project) => { -%>
+    <div class="col-4">
+      <div class="title-2"><%= project.name %></div>
+      <a target="_blank" href="<%= project.site %>"><%= project.site %></a>
+      <div><%= project.description %></div>
+    </div>
+<% }) -%>
+  </div>
+</div>
