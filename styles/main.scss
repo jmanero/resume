@@ -1,12 +1,14 @@
 // Bootstrap Configuration
-$font-size-base: 0.8rem;
+$font-size-base: 0.75rem;
 
 // Load Bootstrap and Font-Awesome
 @import "bootstrap/bootstrap-reboot";
 @import "bootstrap/bootstrap-grid";
+
 @import "bootstrap/_card";
 @import "bootstrap/_badge";
 @import "bootstrap/utilities/_align";
+@import "bootstrap/utilities/_screenreaders";
 @import "bootstrap/utilities/_text";
 @import "font-awesome/font-awesome";
 
@@ -19,11 +21,16 @@ $font-size-base: 0.8rem;
 }
 
 .title-1 {
-  font-size: 1.5rem;
+  font-size: 2 * $font-size-base;
 }
 
 .title-2 {
-  font-size: 1rem;
+  font-size: 1.5 * $font-size-base;
+}
+
+.title-3 {
+  font-size: $font-size-base;
+  font-weight: 600;
 }
 
 .section {
