@@ -1,0 +1,134 @@
+---
+introduction: >-
+  <p>I seek a role on a focused team of engineers at a small, driven company solving difficult
+  problems, where my work will have a meaningful impact upon the company and its customers, and
+  where I can </p>
+  <p>I specialize in the design and implementation of scalable distributed platforms for hosted
+  services, on both cloud and datacenter infrastructure. I've designed systems to operate in
+  potentially hostile environments with low availability, and written software to manage
+  thousands of production resources on Amazon Web Services.</p>
+
+languages:
+  - JavaScript
+  - Ruby
+  - HTML and CSS
+  - Golang
+  - Perl
+
+tools:
+  - Amazon Web Services
+  - Git
+  - Chef
+  - Packer
+  - Vagrant
+  - Consul
+  - Vault
+
+projects:
+  - name: Spectre
+    site: https://volcano-lair.github.io
+    description: >-
+      A collection of services that provide discovery, dynamic configuration, identity and key
+      management, and role-based access control to modern distributed HTTP platforms
+  - name: Convection
+    site: https://github.com/rapid7/convection
+    description: >-
+      Provides a DSL and multi-stack orchestration for Amazon CloudFormation
+  - name: Builderator
+    site: https://github.com/rapid7/builderator
+    description: >-
+      Configures and runs Packer, Vagrant, and Berkshelf from project-specific, host-specific,
+      and external  policy configuration files
+
+history:
+  - name: Rapid7, Inc.
+    location: Cambridge, MA
+    title: Senior Software Engineer, Platform Delivery
+    date: August 2014 - February 2017
+    description: >-
+      Responsible for design, development, and maintenance of automated image building,
+      infrastructure management tools, and configuration management tolls for thousands of
+      virtual machines, databases, and networking resources running on Amazon Web Services.
+    sections:
+      - name: Spectre Project
+        description: >-
+          Started the Spectre project to solve problems common to most distributed network services
+          using HTTP as their transport. The project aims to provide distributed discovery, dynamic configuration,
+          key and secret management, and role-based access control through a set of easily
+          consumed HTTP APIs served locally by on-host agents, and a set of central services to
+          coordinate discovery, identity management, and policy management. The project is open-source
+          with details available at <a target="_blank" href="https://volcano-lair.github.io/">https://volcano-lair.github.io/</a>.
+          Several components, including the Consul and Vault Hashicorp projects, and
+          <a target="_blank" href="https://github.com/rapid7/propsd">Propsd</a>.
+      - name: Monitoring and Alerting
+        description: >-
+          Drove the adoption of DataDog and PagerDuty for monitoring and alerting
+          across Rapid7's production infrastructure. This replaced an ad-hoc collection
+          of scripts reporting to Amazon CloudWatch and inconsistent alerting via SMS and email
+          with an agent deployed to all hosts and an on-call rotation policy that continues
+          to serve as the model for the rest of Rapid7's engineering organization.
+      - name: CloudFormation Automation
+        description: >-
+          Developed <a target="_blank" href="https://github.com/rapid7/convection">convection</a> to
+          provide a definition language and multi-stack orchestration for Amazon CloudFormation.
+          Among other features, it provided the ability to dynamically reference identifiers
+          across stacks several years before Amazon released a similar feature natively
+          in the CloudFormation API. Convection is actively used and developed at Rapid7
+          to manage hundreds of stacks across dozens of AWS accounts and regions.
+      - name: Image Building CI
+        description: >-
+          Replaced a home-grown Amazon Machine Image building platform of shell scripts and
+          <code>chef-ec2</code> with <code>Packer</code>, <code>chef-solo</code>, and
+          <code>Berkshelf</code>, then developed a configuration framework,
+          <a target="_blank" target="_blank" href="https://github.com/rapid7/builderator">builderator</a>, to automatically
+          generate <code>packer.json</code>, <code>Berksfile</code>, and <code>Vagrantfile</code>s
+          from a set of configuration files in the build's repository, on the build host, and from other
+          repositories. This allows common configurations for various types of builds to be
+          consolidated and managed in central repositories, and for build CIs and workstations'
+          local configurations to be defined in one file on the respective host.
+
+  - name: Dyn, Inc.
+    location: Manchester, NH
+    title: Software Engineer
+    description: >-
+      Worked on several teams supporting the DynECT Enterprise DNS platform.
+    sections:
+      - name: Automation Team
+        date: June 3013 - August 2014
+        description: >-
+          Designed and implemented a DNS authoritative platform to run on leased infrastructure
+          in China. System was managed entirely by Chef, including secure TSIG key generation and
+          distribution across sites, LVS load-balancing, and virtual IP addressing for direct-response
+          routing. As of March 2017, the proof-of-concept deployment is still serving DNS for a major
+          hosting provider in China.
+      - name: DNS Performance and Optimization Team
+        date: June 2012 - June 2013
+        description: >-
+          Worked with a team of six to identify and repair faults in and improve the performance of
+          systems that comprise the DynECT DNS platform.
+      - name: Internship
+        date: Summer 2011
+        description: >-
+          Responsible for development and load testing of a replacement HTTP-redirect service
+          for DynDNS. Work including development of a Perl interface to export redirect mappings
+          from the legacy service, and a NodeJS server to handle HTTP requests. After load-testing and
+          tuning, the new service sustained 10,000 connection/second loads on BSD test platforms.
+          Gained experience in professional software development, source control management, and documentation.
+
+  - name: Worcester Polytechnic Institute
+    location: Worcester, MA
+    sections:
+      - name: Batchelor of Science
+        title: Electrical and Computer Engineering, Minor in Computer Science
+        date: Fall 2008 - Spring 2012
+        description: >-
+          Undergraduate work included signals and systems analysis, analysis of mixed-signal circuits,
+          software defined radio design, embedded systems programming, and software engineering.
+      - name: Major Qualifying Project
+        title: Automation of Multiple Energy Source Heating Systems
+        date: Spring 2012
+        description: >-
+          Team of three Electrical and Computer Engineering students created a distributed control plane
+          for multiple energy source heating systems. Platform ran on Linux, using HTTP to read and manage
+          embedded sensors and controls. Report is available at
+          <a target="_blank" href="http://www.wpi.edu/Pubs/E-project/Available/E-project-010612-005154">http://www.wpi.edu/Pubs/E-project/Available/E-project-010612-005154</a>
