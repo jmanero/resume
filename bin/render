@@ -1,1 +1,30 @@
 #!/usr/bin/env node
+'use strict';
+const Render = require('../lib/render');
+
+const Page = require('../lib/page');
+const Static = require('../lib/static');
+const Style = require('../lib/style');
+
+global.Log = require('winston');
+Log.level = 'info';
+
+Style.use('bootstrap', 'bootstrap/scss');
+Style.use('font-awesome', 'font-awesome/scss');
+
+const site = new Render();
+
+// Render SCSS, serve font-awesome fonts
+site.add('/styles', Style.static());
+site.add('/fonts', Static.copy({module: 'font-awesome/fonts'}));
+
+// Serve JavaScript assets
+site.add('/jquery', Static.copy({module: 'jquery/dist'}));
+site.add('/tether', Static.copy({module: 'tether/dist/js'}));
+site.add('/bootstrap', Static.copy({module: 'bootstrap/dist/js'}));
+
+// Render pages
+site.add('/', Page.static());
+
+site.render()
+  .catch((err) => Log.error(err));
